@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: janky_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_NAME:-janky_debts}
+      MYSQL_USER: ${DB_USER:-janky}
+      MYSQL_PASSWORD: ${DB_PASS:-janky}
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "${DB_PORT:-3306}:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: janky_mailhog
+    ports:
+      - "1025:1025"  # SMTP
+      - "8025:8025"  # UI
+
+volumes:
+  dbdata:
