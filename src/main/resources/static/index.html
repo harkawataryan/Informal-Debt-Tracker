@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Informal Debt Tracker</title>
+  <style>
+    body{font-family:system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin:40px;}
+    code{background:#f4f4f4; padding:2px 4px; border-radius:4px}
+  </style>
+</head>
+<body>
+<h1>Informal Debt Tracker</h1>
+<p>It's REST. Use <code>/api/*</code> endpoints.</p>
+<ul>
+  <li>GET <code>/api/people</code></li>
+  <li>POST <code>/api/people</code> — { name, email }</li>
+  <li>GET <code>/api/debts?status=OPEN|SETTLED</code></li>
+  <li>POST <code>/api/debts</code> — { fromId, toId, amount, dueDate, note }</li>
+  <li>POST <code>/api/debts/{id}/settle</code></li>
+  <li>POST <code>/api/reminders/send</code> — { daysAhead }</li>
+</ul>
+<p>For local email, check <a href="http://localhost:8025" target="_blank">MailHog UI</a>.</p>
+</body>
+</html>
