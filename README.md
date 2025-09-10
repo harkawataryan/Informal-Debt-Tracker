@@ -1,5 +1,5 @@
 # Informal Debt Tracker
-A small Spring Boot thingy to keep tabs on who owes who between friends/family. Uses MySQL + Spring Data JPA for storage and Spring Mail (JavaMail) for reminder emails. Not production-grade but clean-ish (and a tad janky on purpose).
+A small Spring Boot thingy to keep tabs on who owes who between friends/family. Uses MySQL + Spring Data JPA for storage and Spring Mail (JavaMail) for reminder emails. Not production-grade but clean-ish (and a tad janky).
 
 ## Features
 - Create people (name + email)
